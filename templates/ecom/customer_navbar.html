@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Tech Titans - Your Tech Superstore</title>
+
+    <!-- Include Bootstrap CSS and JavaScript -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        /* Custom styles for your website */
+        body {
+            background-color: #f8f9fa; /* Light gray background */
+        }
+
+        #navbar {
+            background-color: #343a40; /* Dark navigation bar */
+            color: #ffffff; /* White text */
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff; /* White text for navigation links */
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .navbar-form .form-control {
+            border-radius: 25px;
+        }
+
+        .btn-search {
+            background-color: #007bff; /* Blue search button */
+            color: #ffffff;
+            border-radius: 25px;
+        }
+
+        .btn-search:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .navbar-cart {
+            color: #ffffff;
+            font-size: 20px;
+        }
+
+        .cart-icon {
+            font-size: 28px;
+        }
+
+        /* Additional custom styling can be added here */
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="/">Tech Titans</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link" href="/my-order">Orders</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/my-profile">Profile</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                More
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="moreDropdown">
+                                <a class="dropdown-item" href="/send-feedback">Send Feedback</a>
+                                <a class="dropdown-item" href="/contactus">Contact Us</a>
+                                <a class="dropdown-item" href="/aboutus">About Us</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0" action="/search" method="get">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search for Products" name="query" id="query">
+                        <button class="btn btn-search my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link navbar-cart" href="/cart">
+                                <i class="cart-icon fas fa-shopping-cart"></i> Cart <span class="item-number">{{ product_count_in_cart }}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Your page content goes here -->
+
+</body>
+</html>
+
+

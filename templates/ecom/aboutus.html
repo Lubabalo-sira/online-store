@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Tech Titans</title>
+
+  <title>sumit</title>
+  <style media="screen">
+    .footer{
+      position: fixed;
+    }
+  </style>
+</head>
+
+<body style="background-color: #B3E5FC;">
+  {%if request.user.is_authenticated%}
+    {% include "ecom/customer_navbar.html" %}
+  {%else%}
+    {% include "ecom/navbar.html" %}
+  {%endif%}
+  <br><br><br>
+<h3 style="text-align:center;">“
+  Welcome to Tech Titans—your destination for fashion that celebrates individuality and style. Our handpicked collection caters to diverse tastes, ensuring you'll find the perfect outfit for any occasion. We're dedicated to quality and offer personalized styling advice to make your shopping experience seamless. Join our fashion community, where self-expression thrives, and let us help you look and feel your best. Discover the art of individuality at Tech Titans.” </h3>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  {% include "ecom/footer.html" %}
+</body>
+<!--
+developed By : Tech Titans
+facebook : fb.com/Vuyo xolo
+youtube : youtube.com/Tech Titans
+-->
+
+</html>
